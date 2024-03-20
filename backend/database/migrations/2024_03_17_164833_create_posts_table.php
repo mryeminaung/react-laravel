@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
+            $table->text("post_img");
             $table->string('intro');
             $table->text('body');
             $table->foreignId('user_id');

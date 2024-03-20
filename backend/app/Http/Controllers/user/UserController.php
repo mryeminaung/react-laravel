@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\post;
+namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Post::all();
+        return User::all();
     }
 
     /**
@@ -27,15 +27,15 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(User $user)
     {
-        return $post;
+        return $user;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -43,9 +43,9 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(User $user)
     {
-        $post->delete();
+        $user->delete();
         return ['success' => true];
     }
 }

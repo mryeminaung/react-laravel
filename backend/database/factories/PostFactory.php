@@ -20,6 +20,7 @@ class PostFactory extends Factory
             'title' => $this->faker->sentence,
             'intro' => $this->faker->sentence(3),
             'slug' => $this->faker->slug(4),
+            'post_img' => $this->faker->imageUrl(),
             'body' => $this->faker->paragraph(),
             'user_id' => rand(1, 10),
         ];
