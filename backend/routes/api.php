@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\comment\CommentController;
 use App\Http\Controllers\post\PostController;
 use App\Http\Controllers\user\UserController;
 use Illuminate\Http\Request;
@@ -35,3 +36,9 @@ Route::delete('posts/{post}', [PostController::class, 'destroy']);
 Route::get('users', [UserController::class, 'index']);
 Route::get('users/{user}', [UserController::class, 'show']);
 Route::delete('users/{user}', [UserController::class, 'destroy']);
+
+/* API For Comments */
+
+Route::get('comments', [CommentController::class, 'index']);
+Route::get('comments/{comment}', [CommentController::class, 'show']);
+Route::delete('comments/{comment}', [CommentController::class, 'destroy']);

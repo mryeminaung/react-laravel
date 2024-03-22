@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\post;
+namespace App\Http\Controllers\comment;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Post::all();
+        return Comment::all();
     }
 
     /**
@@ -27,15 +27,15 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(Comment $comment)
     {
-        return $post;
+        return $comment;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Comment $comment)
     {
         //
     }
@@ -43,10 +43,9 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(Comment $comment)
     {
-        $post->delete();
-        $post->comments->delete();
+        $comment->delete();
         return ['success' => true];
     }
 }
